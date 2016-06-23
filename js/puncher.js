@@ -1,4 +1,4 @@
-/// puncher.js
+// puncher.js
 
 
 
@@ -45,7 +45,7 @@ function clear_all()
     stop();
 
     console.clear();
-    console.log("Wyczyszczone!");
+    console.log("Clear out!");
     max_rund = 0;
 }
 
@@ -96,25 +96,7 @@ function addPunch(walk,punchers,seconds) {
     walk.punches[actual_round_selected][actual_punch_now] = punchers;
     walk.punches_time[actual_round_selected][actual_punch_now] = seconds ;
 
-   /* teraz wylaczylem
-
-    */
-
-
-    /*
-	if (typeof(walk.punches[actual_round_selected]) != "undefined")
-	{
-      walk.punches[actual_round_selected] = [];
-	}
-
-	if (typeof(walk.punches_time[actual_round_selected]) != "undefined")
-	{
-      walk.punches_time[actual_round_selected] = [];
-	}
-	walk.punches[actual_round_selected][actual_punch_now] = punch;
-	walk.punches_time[actual_round_selected][actual_punch_now] = seconds;
-
-	*/
+   /* teraz wylac
 
     actual_punch_now ++;
 }
@@ -244,10 +226,10 @@ if (interval_works == TRUE)
 
       // odtworz poszczegolne dzwieki z danej sekundy!
       if (my_punch_in_sec.length>0) {
-            console.log("Uderzenia: ")
+            console.log("Punches: ")
             for (var t=0; t < my_punch_in_sec.length; t++) {
 
-                  console.log(" - " + my_punch_in_sec[t] + " czas: "+ czas_rundowy);
+                  console.log(" - " + my_punch_in_sec[t] + " time: "+ czas_rundowy);
                   //play_sound(my_punch_in_sec[t]); // tylko 1 dzwiek
 
                   play_all_sounds(my_punch_in_sec[t]); // wiele
@@ -376,6 +358,27 @@ $(function() {
       $('#slider-range-cross').slider( "option", "value",  1 );
       $( "#cross" ).val(  convert_to_min_sec( 1 )  );
 
+	  $('#slider-range-lefthook').slider( "option", "max",  len_round );
+      $('#slider-range-lefthook').slider( "option", "value",  1 );
+      $( "#lefthook" ).val(  convert_to_min_sec( 1 )  );
+
+	  $('#slider-range-righthook').slider( "option", "max",  len_round );
+      $('#slider-range-righthook').slider( "option", "value",  1 );
+      $( "#righthook" ).val(  convert_to_min_sec( 1 )  );
+
+	  $('#slider-range-leftuppercut').slider( "option", "max",  len_round );
+      $('#slider-range-leftuppercut').slider( "option", "value",  1 );
+      $( "#leftuppercut" ).val(  convert_to_min_sec( 1 )  );
+
+	  $('#slider-range-rightuppercut').slider( "option", "max",  len_round );
+      $('#slider-range-rightuppercut').slider( "option", "value",  1 );
+      $( "#rightuppercut" ).val(  convert_to_min_sec( 1 )  );
+
+	  $('#slider-range-overhandpunch').slider( "option", "max",  len_round );
+      $('#slider-range-overhandpunch').slider( "option", "value",  1 );
+      $( "#overhandpunch" ).val(  convert_to_min_sec( 1 )  );
+
+
       $('#slider-range-sequence').slider( "option", "max",  len_round );
       $('#slider-range-sequence').slider( "option", "value",  1 );
       $( "#seq_input" ).val(  convert_to_min_sec( 1 )  );
@@ -470,6 +473,166 @@ $(function() {
      	audio.play();
    });
 
+  //lefthook
+
+	$( "#slider-range-lefthook" ).slider({
+
+    range: "min",
+    value: 10,
+    min: 1,
+    max: 1000,
+    slide: function( event, ui ) {
+
+      $( "#lefthook" ).val(  convert_to_min_sec( ui.value)  );
+
+
+    }
+  });
+  $( "#lefthook" ).val(  "00:10" );
+  $( "#add_lefthook_button" ).click(function(){
+
+     var get_jab_time =  $( "#slider-range-lefthook" ).slider("value");
+     addPunch(walk, "lefthook", get_jab_time);
+    // alert(get_jab_time);
+
+   });
+
+
+
+  $( "#lefthook_button" ).click(function(){
+
+        audio = new Audio("dzwieki/lefthook.mp3");
+     	audio.play();
+   });
+
+
+ // righthook
+
+	$( "#slider-range-righthook" ).slider({
+
+    range: "min",
+    value: 10,
+    min: 1,
+    max: 1000,
+    slide: function( event, ui ) {
+
+      $( "#righthook" ).val(  convert_to_min_sec( ui.value)  );
+
+
+    }
+  });
+  $( "#righthook" ).val(  "00:10" );
+  $( "#add_righthook_button" ).click(function(){
+
+     var get_jab_time =  $( "#slider-range-righthook" ).slider("value");
+     addPunch(walk, "righthook", get_jab_time);
+    // alert(get_jab_time);
+
+   });
+
+
+
+  $( "#righthook_button" ).click(function(){
+
+        audio = new Audio("dzwieki/righthook.mp3");
+     	audio.play();
+   });
+
+  // left-uppercut
+
+	 $( "#slider-range-leftuppercut" ).slider({
+
+    range: "min",
+    value: 10,
+    min: 1,
+    max: 1000,
+    slide: function( event, ui ) {
+
+      $( "#leftuppercut" ).val(  convert_to_min_sec( ui.value)  );
+
+
+    }
+  });
+  $( "#leftuppercut" ).val(  "00:10" );
+  $( "#add_leftuppercut_button" ).click(function(){
+
+     var get_jab_time =  $( "#slider-range-leftuppercut" ).slider("value");
+     addPunch(walk, "leftuppercut", get_jab_time);
+    // alert(get_jab_time);
+
+   });
+
+
+
+  $( "#leftuppercut_button" ).click(function(){
+
+        audio = new Audio("dzwieki/leftuppercut.mp3");
+     	audio.play();
+   });
+
+	// right-uppercut
+
+  $( "#slider-range-rightuppercut" ).slider({
+
+    range: "min",
+    value: 10,
+    min: 1,
+    max: 1000,
+    slide: function( event, ui ) {
+
+      $( "#rightuppercut" ).val(  convert_to_min_sec( ui.value)  );
+
+
+    }
+  });
+  $( "#rightuppercut" ).val(  "00:10" );
+  $( "#add_rightuppercut_button" ).click(function(){
+
+     var get_jab_time =  $( "#slider-range-rightuppercut" ).slider("value");
+     addPunch(walk, "rightuppercut", get_jab_time);
+    // alert(get_jab_time);
+
+   });
+
+
+
+  $( "#rightuppercut_button" ).click(function(){
+
+        audio = new Audio("dzwieki/rightuppercut.mp3");
+     	audio.play();
+   });
+
+	// overhandpunch
+
+  $( "#slider-range-overhandpunch" ).slider({
+
+    range: "min",
+    value: 10,
+    min: 1,
+    max: 1000,
+    slide: function( event, ui ) {
+
+      $( "#overhandpunch" ).val(  convert_to_min_sec( ui.value)  );
+
+
+    }
+  });
+  $( "#overhandpunch" ).val(  "00:10" );
+  $( "#add_overhandpunch_button" ).click(function(){
+
+     var get_jab_time =  $( "#slider-range-overhandpunch" ).slider("value");
+     addPunch(walk, "overhandpunch", get_jab_time);
+    // alert(get_jab_time);
+
+   });
+
+
+
+  $( "#overhandpunch_button" ).click(function(){
+
+        audio = new Audio("dzwieki/overhandpunch.mp3");
+     	audio.play();
+   });
 
 
   // sekwencje ---------------------------------------
