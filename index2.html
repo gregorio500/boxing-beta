@@ -1,6 +1,6 @@
 <html>
     <head>
-            
+
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
         <meta name="keywords" content="">
         <meta name="author" content="">
 
-        <title>Walka</title>
+        <title>Fighting boxing simulator</title>
 
 
 <link rel="stylesheet" href="jqueryui/jquery-ui.css">
@@ -20,17 +20,13 @@
   <script src="jqueryui/jquery-ui.js"></script>
 
 
-<script src="js/func.js"></script>        
+<script src="js/func.js"></script>
 <script src="js/puncher.js"></script>
 
-<!--
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
--->
+
 
 </head>
-<body> 
+<body>
 <script src="js-bootstrap/bootstrap.min.js"></script>
 <div class="container">
  <div class="row">
@@ -102,27 +98,81 @@
 
 <br/><br/>
 
+<p>
+  <button id="add_lefthook_button" value="Lefthook">Add</button>
+  <label for="lefthook">Left-hook Time:</label>
+  <input type="text" id="lefthook" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <button id="lefthook_button" value="">Play</button>
+</p>
+<div id="slider-range-lefthook"></div>
+
+<br/><br/>
+
+<p>
+  <button id="add_righthook_button" value="Righthook">Add</button>
+  <label for="righthook">Right-hook Time:</label>
+  <input type="text" id="righthook" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <button id="righthook_button" value="">Play</button>
+</p>
+<div id="slider-range-righthook"></div>
+
+<br/><br/>
+
+<p>
+  <button id="add_leftuppercut_button" value="Leftuppercut">Add</button>
+  <label for="leftuppercut">Left-uppercut Time:</label>
+  <input type="text" id="leftuppercut" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <button id="leftuppercut_button" value="">Play</button>
+</p>
+<div id="slider-range-leftuppercut"></div>
+
+<br/><br/>
+
+<p>
+  <button id="add_rightuppercut_button" value="Rightuppercut">Add</button>
+  <label for="rightuppercut">Right-uppercut Time:</label>
+  <input type="text" id="rightuppercut" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <button id="rightuppercut_button" value="">Play</button>
+</p>
+<div id="slider-range-rightuppercut"></div>
+
+<br/><br/>
+
+<p>
+  <button id="add_overhandpunch_button" value="Overhandpunch">Add</button>
+  <label for="overhandpunch">Overhandpunch Time:</label>
+  <input type="text" id="overhandpunch" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <button id="overhandpunch_button" value="">Play</button>
+</p>
+<div id="slider-range-overhandpunch"></div>
+
+<br/><br/>
+
 <table class="table table-bordered">
      <tr>
        <td>
-           <h2>Sekwencje</h2>
-           
-<p> 
+           <h2>Combos</h2>
+
+<p>
 
   <label for="seq_input">Sequence Time:</label>
   <input type="text" id="seq_input" readonly style="border:0; color:#f6931f; font-weight:bold;">
   <button id="seq_button" value="">Play</button>
 
 </p>
-           
+
         </td>
     </tr>
     <tr>
-      
-       <td><button onclick="punch('cross');">add cross</button> 
-       <button onclick="punch('jab');">add jab</button> 
-       <button onclick="punch('lefthook');">add lefthook</button> 
-       <button onclick="clear_secv();">clear</button> 
+
+       <td><button onclick="punch('cross');">add cross</button>
+       <button onclick="punch('jab');">add jab</button>
+       <button onclick="punch('lefthook');">add lefthook</button>
+       <button onclick="punch('righthook');">add lefthook</button>
+       <button onclick="punch('leftuppercut');">add lefthook</button>
+       <button onclick="punch('rightuppercut');">add lefthook</button>
+       <button onclick="punch('overhandpunch');">add lefthook</button>
+       <button onclick="clear_secv();">clear</button>
         </td>
     </tr>
     <tr>
@@ -130,10 +180,10 @@
             <input type="text" id="secv" value=""/>
         </td>
     </tr>
-    
+
      <tr>
         <td>
-            <button id="add_secv">Add sequence</button> 
+            <button id="add_secv">Add sequence</button>
         </td>
     </tr>
 </table>
@@ -146,9 +196,9 @@
 
 <table>
     <tr>
-        <td><button onclick="play();">Play</button></td> 
-        <td><button onclick="pause();">Pause</button></td> 
-        <td><button onclick="stop();">Stop</button></td> 
+        <td><button onclick="play();">Play</button></td>
+        <td><button onclick="pause();">Pause</button></td>
+        <td><button onclick="stop();">Stop</button></td>
         <td><button onclick="save();">Save</button></td>
     </tr>
 </table>
@@ -159,9 +209,9 @@
 
 
 <hr/>
-<h2>Logi:</h2>
+<h2>Logs:</h2>
 <div id="rounds_fights"></div>
-        
+
     </div>
 
     </body>
