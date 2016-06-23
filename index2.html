@@ -1,0 +1,171 @@
+<html>
+    <head>
+            
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+
+        <title>Walka</title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>     
+
+<script src="jqueryui/jquery-ui.js"></script>
+<link rel="stylesheet" href="jqueryui/jquery-ui.css">
+
+<script src="js/func.js"></script>        
+<script src="js/puncher.js"></script>  
+        
+      
+
+</head>
+<body> 
+ 
+ 
+<p>
+    <button id="new_round" value="new round">New round</button>
+    <button id="show" value="Show">Show rounds</button>
+    <button id="clear" value="Clear">Clear</button>
+    <button id="refresh" value="Refresh" javascript=" ">Refresh page</button>
+</p>
+
+<h2 id="actual"></h2>
+<h2 id="walka_seconds"></h2>
+
+<h1 id="actual_round"></h1>
+<h2 id="round_length"></h2>
+
+
+
+<p>
+  <label for="amount">Round length:</label>
+  <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="slider-range-min"></div>
+
+
+<p>
+  <label for="rest">Rest length:</label>
+  <input type="text" id="rest" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="slider-range-min-rest"></div>
+
+
+<div class="controls" >
+
+
+
+
+<h2>Punches</h2>
+<p>
+  <button id="add_jab_button" value="Jab">Add</button>
+  <label for="jab">Jab Time:</label>
+  <input type="text" id="jab" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <button id="jab_button" value="">Play</button>
+</p>
+<div id="slider-range-jab"></div>
+
+<br/><br/>
+
+
+<p>
+  <button id="add_cross_button" value="Cross">Add</button>
+  <label for="cross">Cross Time:</label>
+  <input type="text" id="cross" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <button id="cross_button" value="">Play</button>
+</p>
+<div id="slider-range-cross"></div>
+
+<br/><br/>
+
+<table>
+     <tr>
+       <td>
+           <h2>Sekwencje</h2>
+           
+<p> 
+
+  <label for="seq_input">Sequence Time:</label>
+  <input type="text" id="seq_input" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <button id="seq_button" value="">Play</button>
+
+</p>
+           
+        </td>
+    </tr>
+    <tr>
+      
+       <td><button onclick="punch('cross');">add cross</button> 
+       <button onclick="punch('jab');">add jab</button> 
+       <button onclick="punch('lefthook');">add lefthook</button> 
+       <button onclick="clear_secv();">clear</button> 
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="secv" value=""/>
+        </td>
+    </tr>
+    
+     <tr>
+        <td>
+            <button id="add_secv">Add sequence</button> 
+        </td>
+    </tr>
+</table>
+<div id="slider-range-sequence"></div>
+
+
+
+<br/><br/>
+
+
+<table>
+    <tr>
+        <td><button onclick="play();">Play</button></td> 
+        <td><button onclick="pause();">Pause</button></td> 
+        <td><button onclick="stop();">Stop</button></td> 
+        <td><button onclick="save();">Save</button></td>
+    </tr>
+</table>
+</div>
+
+
+<div style="clear: both;"></div>
+
+
+<hr/>
+<h2>Logi:</h2>
+<div id="rounds_fights"></div>
+ 
+ 
+ 
+<script>
+ 
+ 
+ /*   
+$( "#aaa" ).data( "atrybut", "hello" ); // zapis
+var d = $( "#aaa" ).data("atrybut"); // odczyt
+//alert(d);
+  
+//kolejka( [new Audio("dzwieki/lefthook.mp3"), new Audio("dzwieki/jab.mp3"), new Audio("dzwieki/cross.mp3"), new Audio("dzwieki/cross.mp3")]);
+
+var str = "jab-cross-lefthook";
+var res = str.split("-"); 
+console.log(res+" " + res.length );
+
+
+var str = "jab";
+var res = str.split("-"); 
+console.log(res +" " + res.length );
+*/
+</script>
+    
+        
+        
+        
+        
+                
+    </body>
+</html>
