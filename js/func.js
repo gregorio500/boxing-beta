@@ -1,6 +1,6 @@
-/// func.js
+// func.js
 
-// 1:30
+
 var convert_to_min_sec = function(t) {
 
     var min = Math.floor( t / 60 ) ;
@@ -12,16 +12,16 @@ var convert_to_min_sec = function(t) {
     return ""+ min + ":" + sec;
 };
 
-//alert( min_sec(123) );
 
 
-// opis rundy
+
+// the round description
 function setActualRound(next_round)
 {
   document.getElementById("actual").innerHTML =  "Selected round: " + next_round;
 }
 
-// czas globalny
+// global time
 function setSeconds(seconds)
 {
     document.getElementById("walka_seconds").innerHTML =  "Time: " + seconds;
@@ -54,10 +54,8 @@ function logs(txt)
 
 
 
-// klasa definiujaca Walke
-// - zawiera rundy, czasy
-// - zawiera ciosy
-//
+
+// object contains amount of rounds, round length, the amount of time for rest, type of punches and the punches placed on the timeline
 function Fight() {
 
   this.rounds = [],
@@ -69,8 +67,7 @@ function Fight() {
 }
 
 
-// proste funkcje - czasowe
-//-------------------------------------------------------------------------
+// Play
 
 function play() {
 
@@ -87,8 +84,7 @@ function play() {
       $( "#actual" ).hide();
       $( "#new_round" ).hide();
       $( "#walka_seconds" ).hide();
-      // zegar
-      // asynchronicznie odtwarzac dzwieki
+
     } else {
         alert("Dodaj rundy!");
     }
@@ -96,14 +92,12 @@ function play() {
 }
 
 function pause() {
-  //alert("pause");
   interval_works = FALSE;
   console.log("pause()");
 
 }
 
 function stop() {
- // alert("stop");
   interval_works = FALSE;
   czas_walki = 0;
   console.log("stop()");
@@ -147,7 +141,28 @@ function play_sound(txt)
         var audio4 = new Audio("dzwieki/lefthook.mp3");
      	audio4.play();
 
+    }else if (txt==="righthook") {
+
+        var audio5 = new Audio("dzwieki/lefthook.mp3");
+     	audio5.play();
+
+    }else if (txt==="leftuppercut") {
+
+        var audio6 = new Audio("dzwieki/leftuppercut.mp3");
+     	audio6.play();
+
+    }else if (txt==="rightuppercut") {
+
+        var audio7 = new Audio("dzwieki/rightuppercut.mp3");
+     	audio7.play();
+
+    }else if (txt==="overhandpunch") {
+
+        var audio8 = new Audio("dzwieki/overhandpunch.mp3");
+     	audio8.play();
+
     }
+
 
 }
 
@@ -175,6 +190,22 @@ function get_sound(txt)
 
         return new Audio("dzwieki/lefthook.mp3");
 
+    }else if (txt==="righthook") {
+
+        return new Audio("dzwieki/righthook.mp3");
+
+    }else if (txt==="leftuppercut") {
+
+        return new Audio("dzwieki/leftuppercut.mp3");
+
+    }else if (txt==="rightuppercut") {
+
+        return new Audio("dzwieki/rightuppercut.mp3");
+
+    }else if (txt==="overhandpunch") {
+
+        return new Audio("dzwieki/overhandpunch.mp3");
+
     }
 
     return null;
@@ -185,31 +216,15 @@ function get_sound(txt)
 //-------------------------------------------------------------------------
 
 
+//View for console
 
 var viewer = function() {
 
     var i=1;
-    console.log("Lista obiektow:");
+    console.log("Objects list:");
     for(i=0; i < execute_list.length; i++)
     {
-        //alert("ok: " + i);
-        console.log("obiekt: " + execute_list[i] );
+
+        console.log("Object: " + execute_list[i] );
     }
 };
-
-
-/*
-function Create2DArray(rows) {
-  var arr = [];
-
-  for (var i=0;i<rows;i++) {
-     arr[i] = [];
-  }
-  return arr;
-}*/
-
-
-//-------------------------------------------------------------------------
-
-
-
