@@ -55,7 +55,7 @@ function addRound(walk)
     // juz nastepna runda
     actual_round_selected = next_round; // zapis stanu
     // log na dole
-    logs("Runda "+actual_round_selected+ "  Czas: " +len_round+ "s   Przerwa: " + len_rest + "s ");
+    logs("Round "+actual_round_selected+ "  Time: " +len_round+ "s   Rest: " + len_rest + "s ");
 
 
     // zapisanie stanu
