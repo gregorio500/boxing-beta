@@ -1,4 +1,4 @@
-// puncher.js
+/// puncher.js
 
 
 
@@ -362,7 +362,7 @@ $(function() {
 
       $( "#amount" ).val(  convert_to_min_sec( ui.value)  );
       len_round = ui.value; // ilosc sek - runda
-     //   len_rest = ui.value;
+      len_rest = ui.value;
 
       $('#slider-range-min-rest').slider( "option", "max",  len_round );
       $( "#rest" ).val(  convert_to_min_sec( len_round )  );
