@@ -96,7 +96,7 @@ function addPunch(walk,punchers,seconds) {
     walk.punches[actual_round_selected][actual_punch_now] = punchers;
     walk.punches_time[actual_round_selected][actual_punch_now] = seconds ;
 
-   /* teraz wylac
+
 
     actual_punch_now ++;
 }
