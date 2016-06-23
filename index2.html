@@ -1,7 +1,10 @@
 <html>
     <head>
             
-        <meta charset="UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -9,26 +12,45 @@
         <title>Walka</title>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>     
-
-<script src="jqueryui/jquery-ui.js"></script>
 <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/custom.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="jqueryui/jquery-ui.js"></script>
+
 
 <script src="js/func.js"></script>        
-<script src="js/puncher.js"></script>  
-        
-      
+<script src="js/puncher.js"></script>
+
+<!--
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+-->
 
 </head>
 <body> 
- 
- 
-<p>
+<script src="js-bootstrap/bootstrap.min.js"></script>
+<div class="container">
+ <div class="row">
+
+
+   <div class="col-md-2">
     <button id="new_round" value="new round">New round</button>
+     </div>
+
+     <div class="col-md-2">
     <button id="show" value="Show">Show rounds</button>
+     </div>
+    <div class="col-md-2" >
     <button id="clear" value="Clear">Clear</button>
+     </div>
+    <div class="col-md-2" >
     <button id="refresh" value="Refresh" javascript=" ">Refresh page</button>
-</p>
+     </div>
+
+    </div>
 
 <h2 id="actual"></h2>
 <h2 id="walka_seconds"></h2>
@@ -49,6 +71,7 @@
   <label for="rest">Rest length:</label>
   <input type="text" id="rest" readonly style="border:0; color:#f6931f; font-weight:bold;">
 </p>
+
 <div id="slider-range-min-rest"></div>
 
 
@@ -79,7 +102,7 @@
 
 <br/><br/>
 
-<table>
+<table class="table table-bordered">
      <tr>
        <td>
            <h2>Sekwencje</h2>
@@ -138,34 +161,8 @@
 <hr/>
 <h2>Logi:</h2>
 <div id="rounds_fights"></div>
- 
- 
- 
-<script>
- 
- 
- /*   
-$( "#aaa" ).data( "atrybut", "hello" ); // zapis
-var d = $( "#aaa" ).data("atrybut"); // odczyt
-//alert(d);
-  
-//kolejka( [new Audio("dzwieki/lefthook.mp3"), new Audio("dzwieki/jab.mp3"), new Audio("dzwieki/cross.mp3"), new Audio("dzwieki/cross.mp3")]);
+        
+    </div>
 
-var str = "jab-cross-lefthook";
-var res = str.split("-"); 
-console.log(res+" " + res.length );
-
-
-var str = "jab";
-var res = str.split("-"); 
-console.log(res +" " + res.length );
-*/
-</script>
-    
-        
-        
-        
-        
-                
     </body>
 </html>
