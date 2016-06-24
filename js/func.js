@@ -99,9 +99,9 @@ function pause() {
 
 function stop() {
   interval_works = FALSE;
-  czas_walki = 0;
+  fight_timer = 0;
   console.log("stop()");
-  aktualna_runda_odtwarzana = 1;
+  current_play_round = 1;
 
   $( "#actual_round" ).hide();
   $( "#round_length" ).hide();

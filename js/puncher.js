@@ -5,7 +5,7 @@
 var TRUE = 1;
 var FALSE = 0;
 var interval_works = FALSE;
-var czas_walki = 0;
+var fight_timer = 0;
 
 var execute_list = [];
 var len_round = 0;
@@ -13,12 +13,12 @@ var len_rest = 0;
 var actual_round_selected = 1; // current round
 var next_round = 1;
 
-var walk = new Fight();
+var all_fight = new Fight();
 var actual_punch_now = 1; // current punch
 
 
-var aktualna_runda_odtwarzana = 1;
-var czas_rundowy  = 0;
+var current_play_round = 1;
+var time_round  = 0;
 
 var max_rund = 0;
 //-----------------------------------------------
@@ -28,13 +28,13 @@ function clear_all()
 {
     // clear out from console
     document.getElementById("rounds_fights").innerHTML  = "";
-    walk = new Fight();
+    all_fight = new Fight();
     actual_round_selected = 1;
     next_round = 1;
     setActualRound(next_round); // komunikat
 
-    aktualna_runda_odtwarzana = 1;
-    czas_rundowy  = 0;
+    current_play_round = 1;
+    time_round  = 0;
 
     stop();
 
@@ -44,7 +44,7 @@ function clear_all()
 }
 
 
-function addRound(walk)
+function addRound(all_fight)
 {
     // next round and save it
     actual_round_selected = next_round;
@@ -52,13 +52,13 @@ function addRound(walk)
 
 
     //
-	walk.rounds.push(actual_round_selected);
-	walk.round_length[actual_round_selected] = len_round;
-	walk.round_rest[actual_round_selected] = len_rest;
+	all_fight.rounds.push(actual_round_selected);
+	all_fight.round_length[actual_round_selected] = len_round;
+	all_fight.round_rest[actual_round_selected] = len_rest;
 
 	// punches
-    walk.punches[actual_round_selected] = [];
-    walk.punches_time[actual_round_selected] = [] ;
+    all_fight.punches[actual_round_selected] = [];
+    all_fight.punches_time[actual_round_selected] = [] ;
 
     // set of variables
 	actual_punch_now = 1;
@@ -70,24 +70,24 @@ function addRound(walk)
 
 
 
-function addPunch(walk,punchers,seconds) {
+function addPunch(all_fight,punchers,seconds) {
 
     console.log("actual_round_selected: " + actual_round_selected)
     console.log("actual punch: " + actual_punch_now);
     console.log("puncher:" + punchers);
     console.log("seconds" + seconds)
-    console.log(walk);
+    console.log(all_fight);
 
 
-    if (typeof(walk.punches[actual_round_selected]) == 'undefined') {
-       walk.punches[actual_round_selected] = new Array();
+    if (typeof(all_fight.punches[actual_round_selected]) == 'undefined') {
+       all_fight.punches[actual_round_selected] = new Array();
     }
 
-    if (typeof(walk.punches_time[actual_round_selected]) == 'undefined') {
-       walk.punches_time[actual_round_selected] = new Array();
+    if (typeof(all_fight.punches_time[actual_round_selected]) == 'undefined') {
+       all_fight.punches_time[actual_round_selected] = new Array();
     }
-    walk.punches[actual_round_selected][actual_punch_now] = punchers;
-    walk.punches_time[actual_round_selected][actual_punch_now] = seconds ;
+    all_fight.punches[actual_round_selected][actual_punch_now] = punchers;
+    all_fight.punches_time[actual_round_selected][actual_punch_now] = seconds ;
 
 
 
@@ -101,8 +101,8 @@ function addPunch(walk,punchers,seconds) {
 //--------------------------------------------------------
 
 
-var czas_rundy = walk.rounds[aktualna_runda_odtwarzana];
-var czas_po_rundzie = walk.round_rest[aktualna_runda_odtwarzana];
+var czas_rundy = all_fight.rounds[current_play_round];
+var czas_po_rundzie = all_fight.round_rest[current_play_round];
 
 
 
@@ -124,31 +124,31 @@ setInterval(function () {
 if (interval_works == TRUE)
 {
 
-    setSeconds(czas_walki);
-    setRoundLength(czas_rundowy,len_round,len_rest);
+    setSeconds(fight_timer);
+    setRoundLength(time_round,len_round,len_rest);
 
     var all_time = len_round + len_rest;
 
 
-    if (czas_rundowy == all_time) {
+    if (time_round == all_time) {
 
-         czas_rundowy = 0;
-         aktualna_runda_odtwarzana ++;
-         setRound(aktualna_runda_odtwarzana);
+         time_round = 0;
+         current_play_round ++;
+         setRound(current_play_round);
     }
 
-    if (aktualna_runda_odtwarzana>max_rund) {
+    if (current_play_round>max_rund) {
         interval_works = FALSE;
         setRoundTextMessage("End fight!");
         return;
     }
 
-    if (  czas_rundowy == 0) {
+    if (  time_round == 0) {
         play_sound("bell");
         //setRoundTextMessage("Fight!");
     }
 
-    if (czas_rundowy == len_round  ) {
+    if (time_round == len_round  ) {
         play_sound("bell");
         setRoundTextMessage("Break");
     }
@@ -158,34 +158,34 @@ if (interval_works == TRUE)
     try {
 
        // browsing the punches
-       if (walk.punches != undefined)
+       if (all_fight.punches != undefined)
        {
 
 
             // i - number of round
             // take name of punches for given second
-           for (var i=aktualna_runda_odtwarzana; i<=aktualna_runda_odtwarzana; i++)
+           for (var i=current_play_round; i<=current_play_round; i++)
            {
-               if (walk.punches[i] != undefined) {
+               if (all_fight.punches[i] != undefined) {
 
-                   console.log(walk.punches[i]);
+                   console.log(all_fight.punches[i]);
 
                    // j - number of punch for given round
-                   for (var j=1; j<=walk.punches[i].length; j++)
+                   for (var j=1; j<=all_fight.punches[i].length; j++)
                    {
-                       if (walk.punches[i][j] != undefined){
+                       if (all_fight.punches[i][j] != undefined){
 
-                           console.log(walk.punches[i][j] + " time: " + walk.punches_time[i][j]);
+                           console.log(all_fight.punches[i][j] + " time: " + all_fight.punches_time[i][j]);
 
-                           if ( walk.punches_time[i][j] == czas_rundowy)
+                           if ( all_fight.punches_time[i][j] == time_round)
                            {
-                              my_punch_in_sec.push("" + walk.punches[i][j]);
+                              my_punch_in_sec.push("" + all_fight.punches[i][j]);
                            }
                        }
 
                    } // for
-               } // walk.punches[i]
-           }//for - walk.punches
+               } // all_fight.punches[i]
+           }//for - all_fight.punches
        }
 
       } catch(Exception) {  }
@@ -195,7 +195,7 @@ if (interval_works == TRUE)
             console.log("Punches: ")
             for (var t=0; t < my_punch_in_sec.length; t++) {
 
-                  console.log(" - " + my_punch_in_sec[t] + " time: "+ czas_rundowy);
+                  console.log(" - " + my_punch_in_sec[t] + " time: "+ time_round);
                   //play_sound(my_punch_in_sec[t]); // just one sound
 
                   play_all_sounds(my_punch_in_sec[t]); // many sounds
@@ -205,7 +205,7 @@ if (interval_works == TRUE)
 
 
       // if round ended then I change the round j
-      //aktualna_runda_odtwarzana
+      //current_play_round
 
 
 } // interval_works
@@ -219,8 +219,8 @@ if (interval_works == TRUE)
 
 // increase counter
 if (interval_works == TRUE) {
-    czas_walki++;
-    czas_rundowy++;
+    fight_timer++;
+    time_round++;
 }
 //-----------------------------------------------------------------
 },1000);
@@ -247,7 +247,7 @@ $(function() {
 
     $( "#new_round" ).click(function(){
 
-        addRound(walk);
+        addRound(all_fight);
         $( "#slider-range-min" ).hide();
         $( "#slider-range-min-rest" ).hide();
 
@@ -258,23 +258,23 @@ $(function() {
     $( "#show" ).click(function(){
 
 
-        console.log(walk);
+        console.log(all_fight);
 
 
         // browsing the punches
-        if (walk.punches != undefined)
+        if (all_fight.punches != undefined)
         {
              // i - number of round
-            for (var i=1; i<=walk.punches.length; i++)
+            for (var i=1; i<=all_fight.punches.length; i++)
             {
-                if (walk.punches[i] != undefined) {
+                if (all_fight.punches[i] != undefined) {
 
-                    console.log(walk.punches[i]);
+                    console.log(all_fight.punches[i]);
                     //
-                    for (var j=1; j<=walk.punches[i].length; j++)
+                    for (var j=1; j<=all_fight.punches[i].length; j++)
                     {
-                        if (walk.punches[i][j] != undefined)
-                        console.log(walk.punches[i][j] + " time: " + walk.punches_time[i][j]);
+                        if (all_fight.punches[i][j] != undefined)
+                        console.log(all_fight.punches[i][j] + " time: " + all_fight.punches_time[i][j]);
 
                     }
                 }
@@ -394,7 +394,7 @@ $(function() {
   $( "#add_jab_button" ).click(function(){
 
      var get_jab_time =  $( "#slider-range-jab" ).slider("value");
-     addPunch(walk, "jab", get_jab_time);
+     addPunch(all_fight, "jab", get_jab_time);
     // alert(get_jab_time);
 
    });
@@ -428,7 +428,7 @@ $(function() {
   $( "#add_cross_button" ).click(function(){
 
         var get_jab_time =  $( "#slider-range-cross" ).slider("value");
-        addPunch(walk, "cross", get_jab_time);
+        addPunch(all_fight, "cross", get_jab_time);
       //  alert(get_jab_time);
 
    });
@@ -457,7 +457,7 @@ $(function() {
   $( "#add_lefthook_button" ).click(function(){
 
      var get_jab_time =  $( "#slider-range-lefthook" ).slider("value");
-     addPunch(walk, "lefthook", get_jab_time);
+     addPunch(all_fight, "lefthook", get_jab_time);
     // alert(get_jab_time);
 
    });
@@ -490,7 +490,7 @@ $(function() {
   $( "#add_righthook_button" ).click(function(){
 
      var get_jab_time =  $( "#slider-range-righthook" ).slider("value");
-     addPunch(walk, "righthook", get_jab_time);
+     addPunch(all_fight, "righthook", get_jab_time);
     // alert(get_jab_time);
 
    });
@@ -522,7 +522,7 @@ $(function() {
   $( "#add_leftuppercut_button" ).click(function(){
 
      var get_jab_time =  $( "#slider-range-leftuppercut" ).slider("value");
-     addPunch(walk, "leftuppercut", get_jab_time);
+     addPunch(all_fight, "leftuppercut", get_jab_time);
     // alert(get_jab_time);
 
    });
@@ -554,7 +554,7 @@ $(function() {
   $( "#add_rightuppercut_button" ).click(function(){
 
      var get_jab_time =  $( "#slider-range-rightuppercut" ).slider("value");
-     addPunch(walk, "rightuppercut", get_jab_time);
+     addPunch(all_fight, "rightuppercut", get_jab_time);
     // alert(get_jab_time);
 
    });
@@ -586,7 +586,7 @@ $(function() {
   $( "#add_overhandpunch_button" ).click(function(){
 
      var get_jab_time =  $( "#slider-range-overhandpunch" ).slider("value");
-     addPunch(walk, "overhandpunch", get_jab_time);
+     addPunch(all_fight, "overhandpunch", get_jab_time);
     // alert(get_jab_time);
 
    });
@@ -631,7 +631,7 @@ $(function() {
         if (str.length>0) {
 
             var get_jab_time =  $( "#slider-range-sequence" ).slider("value");
-            addPunch(walk, str, get_jab_time);
+            addPunch(all_fight, str, get_jab_time);
 
         }
 
