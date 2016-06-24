@@ -10,11 +10,11 @@ var czas_walki = 0;
 var execute_list = [];
 var len_round = 0;
 var len_rest = 0;
-var actual_round_selected = 1; // aktualna runda
+var actual_round_selected = 1; // current round
 var next_round = 1;
 
 var walk = new Fight();
-var actual_punch_now = 1; // aktualny cios
+var actual_punch_now = 1; // current punch
 
 
 var aktualna_runda_odtwarzana = 1;
@@ -22,17 +22,11 @@ var czas_rundowy  = 0;
 
 var max_rund = 0;
 //-----------------------------------------------
-// Rozpoczecie
-
-
-
-
-//-----------------------------------------------------------
 
 
 function clear_all()
 {
-    // czy na pewno wyczyscic
+    // clear out from console
     document.getElementById("rounds_fights").innerHTML  = "";
     walk = new Fight();
     actual_round_selected = 1;
@@ -52,13 +46,12 @@ function clear_all()
 
 function addRound(walk)
 {
-    // juz nastepna runda
-    actual_round_selected = next_round; // zapis stanu
-    // log na dole
+    // next round and save it
+    actual_round_selected = next_round;
     logs("Round "+actual_round_selected+ "  Time: " +len_round+ "s   Rest: " + len_rest + "s ");
 
 
-    // zapisanie stanu
+    //
 	walk.rounds.push(actual_round_selected);
 	walk.round_length[actual_round_selected] = len_round;
 	walk.round_rest[actual_round_selected] = len_rest;
@@ -67,7 +60,7 @@ function addRound(walk)
     walk.punches[actual_round_selected] = [];
     walk.punches_time[actual_round_selected] = [] ;
 
-    // ustawienie zmiennych
+    // set of variables
 	actual_punch_now = 1;
     setActualRound(next_round);
 
@@ -108,33 +101,6 @@ function addPunch(walk,punchers,seconds) {
 //--------------------------------------------------------
 
 
-/*
-walk.rounds.push(1);
-walk.punches[1] = [];
-walk.punches[1][1] = "jab";
-walk.punches[2]=[];
-walk.punches[1][2] = "cross";
-//walk.punches[1].push("jab");
-//walk.punches[1].push(35);
-*/
-//console.log(walk);
-
-
-
-/*
-var round = {
-
-	punches: [],
-
-
-};
-*/
-//round.punches.push("jab|3");
-
-
-
-
-
 var czas_rundy = walk.rounds[aktualna_runda_odtwarzana];
 var czas_po_rundzie = walk.round_rest[aktualna_runda_odtwarzana];
 
@@ -143,7 +109,7 @@ var czas_po_rundzie = walk.round_rest[aktualna_runda_odtwarzana];
 
 
 //------------------------------------------------------------------------------------
-//   ZEGAR  ///
+//   TIME  ///
 //------------------------------------------------------------------------------------
 $(function() {
 
@@ -153,7 +119,7 @@ setRound(1);
 setInterval(function () {
 //-----------------------------------------------------------------
 
-// odtwarzam cios z danej sekundy
+// play punch from given seconds
 
 if (interval_works == TRUE)
 {
@@ -190,21 +156,21 @@ if (interval_works == TRUE)
 
     var my_punch_in_sec = new Array();
     try {
-       // wazne ---------------------------
-       // przegladanie ciosow
+
+       // browsing the punches
        if (walk.punches != undefined)
        {
 
 
-            // i - nr rundy
-            // pobierz nazwy ciosow z danej sekundy
+            // i - number of round
+            // take name of punches for given second
            for (var i=aktualna_runda_odtwarzana; i<=aktualna_runda_odtwarzana; i++)
            {
                if (walk.punches[i] != undefined) {
 
                    console.log(walk.punches[i]);
 
-                   // j - nr ciosu w kolejnosci dla danej rundy
+                   // j - number of punch for given round
                    for (var j=1; j<=walk.punches[i].length; j++)
                    {
                        if (walk.punches[i][j] != undefined){
@@ -221,24 +187,24 @@ if (interval_works == TRUE)
                } // walk.punches[i]
            }//for - walk.punches
        }
-       // wazne ---------------------------
+
       } catch(Exception) {  }
 
-      // odtworz poszczegolne dzwieki z danej sekundy!
+      // play given sounds for given second!
       if (my_punch_in_sec.length>0) {
             console.log("Punches: ")
             for (var t=0; t < my_punch_in_sec.length; t++) {
 
                   console.log(" - " + my_punch_in_sec[t] + " time: "+ czas_rundowy);
-                  //play_sound(my_punch_in_sec[t]); // tylko 1 dzwiek
+                  //play_sound(my_punch_in_sec[t]); // just one sound
 
-                  play_all_sounds(my_punch_in_sec[t]); // wiele
+                  play_all_sounds(my_punch_in_sec[t]); // many sounds
             }
       }
 
 
 
-      // jak runda sie skonczyla - zmieniamy runde
+      // if round ended then I change the round j
       //aktualna_runda_odtwarzana
 
 
@@ -251,7 +217,7 @@ if (interval_works == TRUE)
 
 
 
-// zwiekszenie licznika walki
+// increase counter
 if (interval_works == TRUE) {
     czas_walki++;
     czas_rundowy++;
@@ -268,13 +234,13 @@ if (interval_works == TRUE) {
 
 
 
-// gorne menu
+// top menu
 $(function() {
 
-  // ciosy
+  // punches
   $( ".controls" ).hide();
 
-  // licznik z walki
+  //
   $( "#actual_round" ).hide();
   $( "#round_length" ).hide();
 
@@ -295,27 +261,26 @@ $(function() {
         console.log(walk);
 
 
-        // wazne ---------------------------
-        // przegladanie ciosow
+        // browsing the punches
         if (walk.punches != undefined)
         {
-             // i - nr rundy
+             // i - number of round
             for (var i=1; i<=walk.punches.length; i++)
             {
                 if (walk.punches[i] != undefined) {
 
                     console.log(walk.punches[i]);
-                    // j - nr ciosu w kolejnosci dla danej rundy
+                    //
                     for (var j=1; j<=walk.punches[i].length; j++)
                     {
                         if (walk.punches[i][j] != undefined)
                         console.log(walk.punches[i][j] + " time: " + walk.punches_time[i][j]);
 
-                    } // for
-                } // walk.punches[i]
-            }//for - walk.punches
+                    }
+                }
+            }
         }
-        // wazne ---------------------------
+
    });
 
    $( "#clear" ).click(function(){
@@ -329,7 +294,7 @@ $(function() {
 
 
 
-// przyciski drugorzedne
+
 $(function() {
 
 
