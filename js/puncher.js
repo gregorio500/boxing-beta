@@ -60,7 +60,7 @@ function addRound(all_fight)
     all_fight.punches[actual_round_selected] = [];
     all_fight.punches_time[actual_round_selected] = [] ;
 
-    // set of variables
+
 	actual_punch_now = 1;
     setActualRound(next_round);
 
@@ -654,11 +654,11 @@ function play_all_sounds(str)
                     tablica.push(sound);
                 }
              }
-             kolejka(tablica); // kolejka ciosow
+             kolejka(tablica); // a queue of punches
 
          } else {
 
-            play_sound(str); // pojedynczy cios
+            play_sound(str); // single punch
 
          }
 }
