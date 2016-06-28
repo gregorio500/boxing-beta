@@ -2,11 +2,11 @@
 <h2>For who?</h2>
 <p align="justify">Main goal of this application is help fight athletes to prepare to fight. This beta version of application only focusing on basic boxing techniques but, in future edition, It will be much more a new techniques of the following combat sport: kick/thai-boxing, wrestling, MMA. <br>
  This app can help to proper preparation to fight esspecially when you have access to the video fights of your future opponent. <br>
-Before you set the program and start shadow boxing by imaging your real opponent focuse on following things to build a scheme for given opponent:</p> <br>
+Before you set the program and start shadow boxing by imaging your real opponent focus on following things to build a scheme for given opponent:</p> <br>
 <ul>
 <li>fighting rhythm of your oponnent (frequency of the initiating single punch, combos, specific rhythm of footwork  </li>
-<li>what kind of single punch or combos your oponnent inititing and a situation under it occur</li>
-<li>just do a simple statistic of your oponnent techniques actions and include all detail on timeline in this app. </li>
+<li>what kind of single punch or combos your oponnent inititing and a situation under It happen</li>
+<li>just do a simple statistic from your oponnent fights include all actions and then include all detail on timeline in this app. </li>
 <li>in next edition of the application will be possibility to make simple statistic by using simple parametrs like ( statistical mode, arithmetic mean and all of values will be visualized on graphs</li>
 </ul> 
 
