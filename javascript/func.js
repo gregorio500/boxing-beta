@@ -123,42 +123,42 @@ function play_sound(txt)
 
     if (txt==="bell") {
 
-        var audio1 = new Audio("dzwieki/bell.mp3");
+        var audio1 = new Audio("sounds/bell.mp3");
      	audio1.play();
 
     } else if (txt==="cross") {
 
-        var audio2 = new Audio("dzwieki/cross.mp3");
+        var audio2 = new Audio("sounds/cross.mp3");
      	audio2.play();
 
     }else if (txt==="jab") {
 
-        var audio3 = new Audio("dzwieki/jab.mp3");
+        var audio3 = new Audio("sounds/jab.mp3");
      	audio3.play();
 
     }else if (txt==="lefthook") {
 
-        var audio4 = new Audio("dzwieki/lefthook.mp3");
+        var audio4 = new Audio("sounds/lefthook.mp3");
      	audio4.play();
 
     }else if (txt==="righthook") {
 
-        var audio5 = new Audio("dzwieki/lefthook.mp3");
+        var audio5 = new Audio("sounds/lefthook.mp3");
      	audio5.play();
 
     }else if (txt==="leftuppercut") {
 
-        var audio6 = new Audio("dzwieki/leftuppercut.mp3");
+        var audio6 = new Audio("sounds/leftuppercut.mp3");
      	audio6.play();
 
     }else if (txt==="rightuppercut") {
 
-        var audio7 = new Audio("dzwieki/rightuppercut.mp3");
+        var audio7 = new Audio("sounds/rightuppercut.mp3");
      	audio7.play();
 
     }else if (txt==="overhandpunch") {
 
-        var audio8 = new Audio("dzwieki/overhandpunch.mp3");
+        var audio8 = new Audio("sounds/overhandpunch.mp3");
      	audio8.play();
 
     }
@@ -173,38 +173,38 @@ function get_sound(txt)
 
     if (txt==="bell") {
 
-        return new Audio("dzwieki/bell.mp3");
+        return new Audio("sounds/bell.mp3");
 
 
     } else if (txt==="cross") {
 
-        return new Audio("dzwieki/cross.mp3");
+        return new Audio("sounds/cross.mp3");
 
 
     }else if (txt==="jab") {
 
-        return  new Audio("dzwieki/jab.mp3");
+        return  new Audio("sounds/jab.mp3");
 
 
     }else if (txt==="lefthook") {
 
-        return new Audio("dzwieki/lefthook.mp3");
+        return new Audio("sounds/lefthook.mp3");
 
     }else if (txt==="righthook") {
 
-        return new Audio("dzwieki/righthook.mp3");
+        return new Audio("sounds/righthook.mp3");
 
     }else if (txt==="leftuppercut") {
 
-        return new Audio("dzwieki/leftuppercut.mp3");
+        return new Audio("sounds/leftuppercut.mp3");
 
     }else if (txt==="rightuppercut") {
 
-        return new Audio("dzwieki/rightuppercut.mp3");
+        return new Audio("sounds/rightuppercut.mp3");
 
     }else if (txt==="overhandpunch") {
 
-        return new Audio("dzwieki/overhandpunch.mp3");
+        return new Audio("sounds/overhandpunch.mp3");
 
     }
 

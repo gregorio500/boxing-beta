@@ -403,7 +403,7 @@ $(function() {
 
   $( "#jab_button" ).click(function(){
 
-        audio = new Audio("dzwieki/jab.mp3");
+        audio = new Audio("sounds/jab.mp3");
      	audio.play();
    });
 
@@ -434,7 +434,7 @@ $(function() {
    });
    $( "#cross_button" ).click(function(){
 
-     	audio = new Audio("dzwieki/cross.mp3");
+     	audio = new Audio("sounds/cross.mp3");
      	audio.play();
    });
 
@@ -466,7 +466,7 @@ $(function() {
 
   $( "#lefthook_button" ).click(function(){
 
-        audio = new Audio("dzwieki/lefthook.mp3");
+        audio = new Audio("sounds/lefthook.mp3");
      	audio.play();
    });
 
@@ -499,7 +499,7 @@ $(function() {
 
   $( "#righthook_button" ).click(function(){
 
-        audio = new Audio("dzwieki/righthook.mp3");
+        audio = new Audio("sounds/righthook.mp3");
      	audio.play();
    });
 
@@ -531,7 +531,7 @@ $(function() {
 
   $( "#leftuppercut_button" ).click(function(){
 
-        audio = new Audio("dzwieki/leftuppercut.mp3");
+        audio = new Audio("sounds/leftuppercut.mp3");
      	audio.play();
    });
 
@@ -563,7 +563,7 @@ $(function() {
 
   $( "#rightuppercut_button" ).click(function(){
 
-        audio = new Audio("dzwieki/rightuppercut.mp3");
+        audio = new Audio("sounds/rightuppercut.mp3");
      	audio.play();
    });
 
@@ -595,7 +595,7 @@ $(function() {
 
   $( "#overhandpunch_button" ).click(function(){
 
-        audio = new Audio("dzwieki/overhandpunch.mp3");
+        audio = new Audio("sounds/overhandpunch.mp3");
      	audio.play();
    });
 
