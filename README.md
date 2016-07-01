@@ -1,4 +1,7 @@
 <h1># boxing-beta</h1>
+<h1 color:'red'>UPDATE</h1>
+<p color:'red'>Currently I working on a new layout because the current graphic design leaves a lot to be desired. I going to use UI/UX methods to do a nice design.</p>
+
 <h2>For who?</h2>
 <p align="justify">Main goal of this application is help fight athletes to prepare to fight. This beta version of application only focusing on basic boxing techniques but, in future edition, It will be much more a new techniques of the following combat sport: kick/thai-boxing, wrestling, MMA. <br>
  This app help you get prepared to fight esspecially when you have access to the videos fights of your next opponent. <br>
