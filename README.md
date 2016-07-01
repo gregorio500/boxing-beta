@@ -1,5 +1,10 @@
 <h1># boxing-beta</h1>
-<<h1 style="color:blue;">UPDATE:</h1>
+<style>
+
+h1   {color:blue;}
+p    {color:blue;}
+</style>
+<h1>UPDATE:</h1>
 <p style="color-font:red">Currently I working on a new layout because the current graphic design leaves a lot to be desired. I going to use UI/UX methods to do a nice design.</p>
 
 <h2>For who?</h2>
