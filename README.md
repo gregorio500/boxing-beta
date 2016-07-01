@@ -21,6 +21,7 @@ Before you set the program and start shadow boxing by imaging your real opponent
 <li>Use the slider to set how long the each round will take</li>
 <li>Use the slider to set how long the brakes should take between the each rounds</li>
 <li>Select the boxing techniques (single punches and combos) and put it properly on timeline</li>
+<li>Press the "Play" button below!
 </ol>
 <br>
 
