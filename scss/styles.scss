@@ -1,3 +1,75 @@
+$deepBlue: rgb(3, 47, 62);
+$marginCon: 1%;
+$paddingCon: 6%;
+
 body {
-	background: #2C3E50;
+margin: 0;
+padding: 0;
+background: #485563; /* fallback for old browsers */
+background: -webkit-radial-gradient(circle, #485563 , #29323c); /* Chrome 10-25, Safari 5.1-6 */
+background: radial-gradient(circle, #485563, #29323c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+header {
+background: $deepBlue;
+padding-left: $marginCon;
+padding-top: .7%;
+nav ul {
+width: 100%;
+padding-left: 0;
+}
+li {
+float: left;
+width: 14%;
+        list-style-type: none;
+padding-left: $marginCon;
+padding-bottom: 1%;
+}
+button {
+/*color: rgb(255, 255, 255);
+opacity: 0.2;
+z-index: 0;
+    text-decoration: none;
+width: 100%;
+    padding: 10%;
+    display: block;
+    text-align: center;*/
+  outline-width: 0px !important;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10%;
+  width: 100%;
+  max-width: 200px;
+  background: #fff;
+background: rgba(255, 255, 255, 0.5);
+  border-radius: 18%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+    &:hover{
+      background: lighten($deepBlue, 6);
+    }
+}
+h1 {
+padding-left: $marginCon;
+color: azure;
+}
+}
+nav ul:after {
+content: "";
+display: block;
+clear: both;
+}
+
+
+input[type=text], select {
+    width: 18%;
+    padding: 7px 20px;
+    margin: 18px 10;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
