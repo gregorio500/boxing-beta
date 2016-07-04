@@ -54,7 +54,7 @@
 	border: 1px solid #c5c5c5;
 	background: #f6f6f6;
 	font-weight: normal;
-	color: #454545;
+	color: #162d63;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -72,6 +72,7 @@
 	background: #ededed;
 	font-weight: normal;
 	color: #2b2b2b;
+
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
@@ -83,6 +84,8 @@
 .ui-state-focus a:visited {
 	color: #2b2b2b;
 	text-decoration: none;
+
+
 }
 .ui-state-active,
 .ui-widget-content .ui-state-active,
