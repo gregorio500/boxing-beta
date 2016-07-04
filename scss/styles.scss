@@ -66,12 +66,45 @@ clear: both;
 }
 
 
-input[type=text], select {
-    width: 18%;
-    padding: 7px 20px;
-    margin: 18px 10;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+input[type=text] {
+//    width: 15%;
+//	height: 4%;
+//    padding: 1% 3%;
+//    margin: 3% 6%;
+//    display: inline-block;
+//    border: 1px solid #ccc;
+//    border-radius: 8%;
+//    box-sizing: border-box;
+//	color: red;
+//	text-align: center;
+   border: 1px solid #000103;
+   background: #000945;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3a5391), to(#000945));
+   background: -webkit-linear-gradient(top, #3a5391, #000945);
+   background: -moz-linear-gradient(top, #3a5391, #000945);
+   background: -ms-linear-gradient(top, #3a5391, #000945);
+   background: -o-linear-gradient(top, #3a5391, #000945);
+   background-image: -ms-linear-gradient(top, #3a5391 0%, #000945 100%);
+   /*-webkit-border-radius: 9px;
+   //-moz-border-radius: 9px;
+   border-radius: 9px;*/
+   -webkit-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   -moz-box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   box-shadow: rgba(000,000,000,0.9) 0 1px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+   font-family: 'Helvetica Neue',Helvetica,sans-serif;
+   text-decoration: none;
+   //vertical-align: middle;
+	border-radius: 8%;
+	margin: 3% 6%;
+   width: 15%;
+   height: 4%;
+   padding: 1% 3%;
+	text-align: center;
+	text-shadow: #000000 0 1px 0;
+   font-size:90%;
+   color: #c9b7a2;
+   font-weight:bold;
+   text-align:center;
+   }
+
+
