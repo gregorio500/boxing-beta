@@ -60,18 +60,30 @@ nav ul:after {
   clear: both; }
 
 #belowHeader {
-  padding: 4%; }
-
-#introduced {
+  padding: 4%;
   color: aliceblue; }
-  #introduced p {
+  #belowHeader p {
     font-size: 100%;
+    color: aliceblue; }
+    #belowHeader p label {
+      font-weight: bold;
+      display: inline;
+      padding-left: 5%; }
+  #belowHeader h2 {
     color: aliceblue; }
 
 #punchCombos {
   padding: 4%;
   font-size: 100%;
   color: aliceblue; }
+
+#combos {
+  padding-top: 5%; }
+  #combos button {
+    padding: 1%; }
+  #combos input {
+    width: 40%;
+    height: 90%; }
 
 input[type=text] {
   border: 1px solid #000103;

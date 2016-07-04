@@ -69,20 +69,41 @@ clear: both;
 
 #belowHeader {
 	padding: 4%;
-}
 
-#introduced {
 	color:aliceblue;
 	p{
 	font-size: 100%;
 	color:aliceblue;
+	label {
+
+font-weight: bold;
+display: inline;
+padding-left: 5%;
+
 }
+
 }
+	h2 {
+		color: aliceblue;
+	}
+}
+
 
 #punchCombos {
 	padding: 4%;
 	font-size: 100%;
 	color:aliceblue;
+}
+
+#combos {
+	padding-top: 5%;
+	button {
+		padding: 1%;
+	}
+	input {
+		width: 40%;
+		height: 90%;
+	}
 }
 
 input[type=text] {

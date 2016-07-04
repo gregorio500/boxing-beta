@@ -42,9 +42,6 @@
      <li>
     <button id="show" class="btn btn-primary btn-lg" value="Show">Show rounds</button>
      </li>
-    <!--<div class="col-md-2" >
-    <button id="clear" class="btn btn-primary btn-lg" value="Clear">Clear</button>
-     </div>-->
     <li>
     <button id="refresh" class="btn btn-primary btn-lg" value="Refresh" javascript=" ">Reset</button>
      </li>
@@ -54,9 +51,10 @@
 </header>
 
 <!--after header-->
+<div id="belowHeader">
 
-<section id='introduced'>
-<div id='belowHeader'>
+
+
 
 <h2 id="actual"></h2>
 <h2 id="walka_seconds"></h2>
@@ -67,8 +65,7 @@
 
 
 <p>
-  <label for="amount">Round length:</label>
-  <input type="text" id="amount">
+  <label for="amount">Round length: <input type="text" id="amount">
 </p>
 <div id="slider-range-min"></div>
 
@@ -76,9 +73,18 @@
   <label for="rest">Rest length:</label>
   <input type="text" id="rest">
 </p>
+<script>
+	$(function() {
+  // Handler for .ready() called.
 
+	$('#box').change(function(){
+    $('#slider').attr({"value":parseInt(this.value)});
+});
+		});
+	</script>
 <div id="slider-range-min-rest"></div>
-</section>
+
+
 
 <div class="controls" >
 
@@ -152,9 +158,9 @@
 </p>
 <div id="slider-range-overhandpunch"></div>
 
-<br/><br/>
 
-<table class="table table-bordered">
+<div id='combos'>
+<table>
      <tr>
        <td>
            <h2>Combos</h2>
@@ -166,6 +172,7 @@
   <div id="slider-range-sequence"></div>
 
 </p>
+        <br/><br/>
 
         </td>
     </tr>
@@ -197,14 +204,14 @@
 </table>
 
 
-
+	</div>
 
 <br/><br/>
 
 
 <table>
     <tr>
-        <td><button onclick="play();">Play</button></td>
+        <td><button onclick="play();">Start Shadow Fight!</button></td>
         <td><button onclick="pause();">Pause</button></td>
         <td><button onclick="stop();">Stop</button></td>
         <td><button onclick="save();">Save</button></td>
@@ -222,5 +229,6 @@
 <div id="rounds_fights"></div>
 </footer>
 </div>
+
     </body>
 </html>
