@@ -1,5 +1,13 @@
 // func.js
-
+/*$("mybuttons").unbind();
+$("mybuttons").getLabels().unbind();
+jQuery.fn.getLabels = function () {
+    return this.map(function () {
+        var parentLabels = $(this).parents('label').get();
+        var associatedLabels = this.id ? associatedLabels = $("label[for='" + this.id + "']").get() : [];
+        return parentLabels.concat(associatedLabels);
+    });
+};*/
 
 var convert_to_min_sec = function(t) {
 

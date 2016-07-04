@@ -26,6 +26,10 @@
 
 </head>
 <body>
+
+
+<!--header-->
+
 <header>
 <h1>BOXING SIMULATOR</h1>
 <nav>
@@ -42,28 +46,31 @@
     <button id="clear" class="btn btn-primary btn-lg" value="Clear">Clear</button>
      </div>-->
     <li>
-    <button id="refresh" class="btn btn-primary btn-lg" value="Refresh" javascript=" ">Refresh page</button>
+    <button id="refresh" class="btn btn-primary btn-lg" value="Refresh" javascript=" ">Reset</button>
      </li>
 </ul>
 </nav>
 
 </header>
 
-<section>
+<!--after header-->
+
+<section id='introduced'>
+<div id='belowHeader'>
+
 <h2 id="actual"></h2>
 <h2 id="walka_seconds"></h2>
 
 <h1 id="actual_round"></h1>
 <h2 id="round_length"></h2>
-</section>
 
-<section>
+
+
 <p>
   <label for="amount">Round length:</label>
   <input type="text" id="amount">
 </p>
 <div id="slider-range-min"></div>
-
 
 <p>
   <label for="rest">Rest length:</label>
@@ -80,7 +87,7 @@
   <button id="add_jab_button" value="Jab">Add</button>
   <label for="jab">Jab Time:</label>
   <input type="text" id="jab">
-  <button id="jab_button" value="">Play</button>
+  <button id="jab_button" value="" data-role='none'>Play</button>
 </p>
 <div id="slider-range-jab"></div>
 
@@ -214,6 +221,6 @@
 <h2>Logs:</h2>
 <div id="rounds_fights"></div>
 </footer>
-
+</div>
     </body>
 </html>
