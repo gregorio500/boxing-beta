@@ -28,5 +28,4 @@ Before you set the program and start shadow boxing by imaging your real opponent
 
 <h2>Who is a creator?</h2>
 <p align="justify">My big passion is MMA and any other full-contact combat sport. I’ve been training martial arts since child. I was professional figther in MMA and the amateur fighter in brazilian ju-jitsu. My goal is to create a new tools to help fight athlets to prepare to fight. Each fight should be predictable as much as possible and preperation should use the most clever method !<br>
-I really loved it - both of them: combat sport (my first love) and coding (the second love :) )! <br>
-I am a beginner programmer and I've been regularly practing coding since 3 years, highly focusing on javascript and python. I have a few others conceptions to create similar applications and each of them are very innovative but I still need to improve my coding skills to express it that’s why I highly appreciate any advices.</p>
+</p>
