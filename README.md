@@ -1,11 +1,11 @@
 <h1># boxing-beta</h1>
 
 <h1>UPDATE:</h1>
-<p style="color":"red">This is just a sketch for a boxing simulator. Currently I working on a new layout because the current graphic design leaves a lot to be desired. I going to use UI/UX methodology to do a nice design.</p>
+<p style="color":"red">This is just a sketch for a boxing simulator. Currently I working on a new layout because the current graphic design leaves a lot to be desired. I am going to use UI/UX methodology in order to do a nice design.</p>
 
 <h2>For who?</h2>
-<p align="justify">Main goal of this application is help fight athletes to prepare to fight. This beta version of application only focusing on basic boxing techniques but, in future edition, It will be much more a new techniques of the following combat sport: kick/thai-boxing, wrestling, MMA. <br>
- This app help you get prepared to fight esspecially when you have access to the videos fights of your next opponent. <br>
+<p align="justify">Main goal of this application is to help fight athletes to prepare to fight. This beta version of application only focusing on basic boxing techniques but, in future edition, It will be much more a new techniques of the following combat sport: kick/thai-boxing, wrestling, MMA. <br>
+ The app help you get prepared to fight esspecially when you have access to the videos fights of your next opponent. <br>
 Before you set the program and start shadow boxing by imaging your real opponent focus on following things to build a scheme for the given opponent:</p> <br>
 <ul>
 <li>fighting rhythm of your oponnent (frequency of the initiating single punch, combos, specific rhythm of footwork  </li>
