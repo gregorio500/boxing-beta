@@ -11,7 +11,7 @@ Before you set the program and start shadow boxing by imaging your real opponent
 <li>fighting rhythm of your oponnent (frequency of the initiating single punch, combos, specific rhythm of footwork  </li>
 <li>what kind of single punch or combos your oponnent inititing and a situation under it happens</li>
 <li>just do a simple statistic from your oponnent fights include all actions, and then, include all the details on the timeline in this app. </li>
-<li>in next edition of the application will be possibility to make simple statistic by using simple parametrs like ( statistical mode, arithmetic mean and all of values will be visualized on graphs</li>
+<li>in next edition of the application will be possibility to make simple statistic ( statistical mode, arithmetic mean and all of values will be visualized on graphs</li>
 </ul> 
 
 <h2>How to use it?</h2>
