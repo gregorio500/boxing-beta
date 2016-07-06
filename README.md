@@ -1,6 +1,6 @@
 <h1># boxing-beta</h1>
 
-<h1>UPDATE:</h1>
+<h1> 05/07/16  UPDATE:</h1>
 <p style="color":"red">This is just a sketch for a boxing simulator. Currently I working on a new layout because the current graphic design leaves a lot to be desired. I am going to use UI/UX methodology in order to do a nice design.</p>
 
 <h2>For who?</h2>
