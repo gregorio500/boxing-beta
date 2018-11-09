@@ -5,12 +5,12 @@
 
 <h2>For who?</h2>
 <p align="justify">The main goal of this app is helping fighters to prepare to fight. This demo only focusing on basic boxing techniques. In the commercial version I am going to add commands from MMA and kickboxing. <br>
- The app helps you to be prepared to fight especially when you have access to the videos fights of your next opponent. <br>
+ The app helps you to be prepared to fight especially when you have access to the video fights of your next opponent. <br>
 Before you set the program and start shadow boxing by imaging your real opponent focus on following things to build a scheme for the given opponent:</p> <br>
 <ul>
-<li>fighting rhythm of your opponent (frequency of the initiating single punch, combos, specific rhythm of footwork  </li>
+<li>fighting rhythm of your opponent (frequency of the initiating single punch, combos, specific rhythm of footwork)  </li>
 <li>what kind of single punch or combos your opponent initiating and a situation under it happens</li>
-<li>just do a simple statistic from your opponent fights, including all actions, and then, set the details on the timeline in this app. </li>
+<li>just do a simple statistic from your opponent fights, including all actions, and then, put the details on the timeline in the app. </li>
 </ul> 
 
 <h2>How to use it?</h2>
