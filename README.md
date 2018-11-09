@@ -2,6 +2,11 @@
 
 <h1> 05/07/16  UPDATE:</h1>
 <p style="color":"red">This is a demo for simulating boxing technique.</p>
+<br>
+<br>
+<a href="https://goo.gl/9fFWwd">Check the video</a>
+<br>
+<br>
 
 <h2>For who?</h2>
 <p align="justify">The main goal of this app is helping fighters to prepare to fight. This demo only focusing on basic boxing techniques. In the commercial version I am going to add commands from MMA and kickboxing. <br>
@@ -14,7 +19,7 @@ Before you set the program and start shadow boxing by imaging your real opponent
 </ul> 
 
 <h2>How to use it?</h2>
-<a href="https://goo.gl/4eyCsU">Check the video</a>
+<a href="https://goo.gl/9fFWwd">Check the video</a>
 <p align="justify">It is that simple, it just needs to adhere to the following instructions:</p>
 <ol>
 <li>push the button with “New round”. Now, you can set the selected round using the below sliders</li>
