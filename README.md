@@ -4,7 +4,7 @@
 <p style="color":"red">This is a demo for simulating boxing technique.</p>
 <br>
 <br>
-<a href="https://goo.gl/9fFWwd">Check the video</a>
+<a href="https://goo.gl/9fFWwd">CHECK THE VIDEO TUTORIAL</a>
 <br>
 <br>
 
